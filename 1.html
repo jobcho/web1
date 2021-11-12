@@ -1,1 +1,119 @@
-hello web
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    function rememberSelect([],onclick){
+      document.write([]+onclick);
+    }
+    function arrayWrite([]) {
+      document.write([]);
+    }
+    // function setTypeButton(index, arr1, arr2) {
+    //   document.write('<span>'+(index+1)+'<br></span>');
+    //   for(var i = 0; i < 2; i++) {
+    //     var button = document.createElement("button");
+    //     button.innerHTML = arr1[i];
+    //     // 2. Append somewhere
+    //     var body = document.getElementsByTagName("body")[0];
+    //     body.appendChild(button);
+    //
+    //   }
+    // }
+    function selectMovieType(button, index, arr) {
+      for(var i = 0; i < 2; i++) {
+        var button = document.createElement("button");
+        button.innerHTML = runningtime[i];
+        // 2. Append somewhere
+        var body = document.getElementsByTagName("body")[0];
+        body.appendChild(button);
+      }
+    }
+
+    </script>
+  </head>
+  <body>
+    <h1>내 취향에 맞는 퍼플레이 영화는 무엇?</h1>
+    <script>
+
+      var runningtime = ["긴 영화도 좋아!", "영화는 짧을 수록 좋아!"];
+      var mood = ["약간 진지한 분위기를 선호해", "오늘은 가벼분 영화가 땡기네"];
+      var award = ["영화제에서 상영한 유명한 작품", "나만 알고 싶은 숨은 명작"]
+      var genre = ["다큐멘터리 완전 좋아", "난 극영화가 좋더라"];
+      var newmovie = ["따끈한 신작을 보고 싶어", "윗세대의 여성영화도 궁금해"];
+      var option = [runningtime, mood, award, genre, newmovie];
+      var rememberYou = [];
+      var buttonIndex = 1;
+      for (var i = 0; i < 5; i++) {
+        document.write('<input id="button'+(buttonIndex++)+'" type="button" value="'+option[i][0]+'" onclick="');
+        document.write('">');
+        document.getElementById("button1").addEventListener("click", addNum);
+        function addNum() {
+          var result = 0;
+          var num = document.getElementById("number").value;
+          for (var i = 1; i <= num; i++) {
+            result += i; // result = result + i 와 같다.
+          }
+        }
+        document.getElementById("output").innerHTML = result;
+
+
+        document.write('<input id="button'+(buttonIndex++)+'" type="button" value="'+option[i][1]+'" onclick="');
+        // var target = document.querySelector('body');
+        //   if(this.value === "긴 영화도 좋아!"){
+        //     target.style.backgroundColor = 'black';
+        //     target.style.color = 'white';
+        //     this.value = 'day';
+        //
+        //     var alist = document.querySelectorAll('a');
+        //     var i = 0;
+        //     while(i < alist.length){
+        //       alist[i].style.color = 'powderblue';
+        //       i = i + 1;
+        //     }
+        //   } else {
+        //     target.style.backgroundColor = 'white';
+        //     target.style.color = 'black';
+        //     this.value = 'night';
+        //
+        //     var alist = document.querySelectorAll('a');
+        //     var i = 0;
+        //     while(i < alist.length){
+        //       alist[i].style.color = 'blue';
+        //       i = i + 1;
+        //     }
+        //   }
+        document.write('">');
+        document.write('<br>');
+        //<input id="runningtime_long" type="button" value="긴 영화도 좋아!" onclick="
+      //   var target = document.querySelector('body');
+      //   if(this.value === "긴 영화도 좋아!"){
+      //     target.style.backgroundColor = 'black';
+      //     target.style.color = 'white';
+      //     this.value = 'day';
+      //
+      //     var alist = document.querySelectorAll('a');
+      //     var i = 0;
+      //     while(i < alist.length){
+      //       alist[i].style.color = 'powderblue';
+      //       i = i + 1;
+      //     }
+      //   } else {
+      //     target.style.backgroundColor = 'white';
+      //     target.style.color = 'black';
+      //     this.value = 'night';
+      //
+      //     var alist = document.querySelectorAll('a');
+      //     var i = 0;
+      //     while(i < alist.length){
+      //       alist[i].style.color = 'blue';
+      //       i = i + 1;
+      //     }
+      //   }
+      // ">
+    }
+    </script>
+
+  </body>
+  </html>
